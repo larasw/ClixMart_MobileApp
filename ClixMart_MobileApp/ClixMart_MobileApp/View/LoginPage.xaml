@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClixMart_MobileApp.LoginPage">
+    <ScrollView>
+        <StackLayout Padding="40" BackgroundColor="White">
+            <Label Text="Welcome to ClixMart!"
+                   FontSize="Large"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image Source="ClixmartLogo.png" Margin="0,0,0,40"/>
+
+            <Label Text="Please enter your details!"/>
+            <Entry x:Name="textUser" Placeholder="Username"/>
+            <Entry x:Name="textPass" Placeholder="Password" IsPassword="True"/>
+
+            <Button Text="Log In" BackgroundColor="CornflowerBlue" TextColor="White" x:Name="btnLogin"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="btnSignUp" Text="Don't have an account? Sign up here for free"/>
+                <Button x:Name="btnGuest" Text="Continue as a Guest" FontSize="Micro" BackgroundColor="CornflowerBlue" TextColor="White"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

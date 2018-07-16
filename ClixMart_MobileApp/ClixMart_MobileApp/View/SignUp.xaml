@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClixMart_MobileApp.SignUp">
+    <ContentPage.Content>
+        <StackLayout Padding="40">
+            <Label Text="Register Your Account" 
+            Font="Bold, 30" XAlign="Center" Margin="0,0,0,40"></Label>
+            <Label Text="Username"></Label>
+            <Entry x:Name="username"></Entry>
+            
+            <Label Text="E-mail"></Label>
+            <Entry x:Name="email"></Entry>
+            
+            <Label Text="Password"></Label>
+            <Entry x:Name="password" IsPassword="True"></Entry>
+            
+            <Label Text="Confirm Password"></Label>
+            <Entry x:Name="confpassword" IsPassword="True"></Entry>
+            
+            <Button Margin="0,10,0,0" x:Name="btnSignUp" Text="Confirm" FontSize="Medium" BackgroundColor="CornflowerBlue" TextColor="White" HorizontalOptions="Center"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClixMart_MobileApp.Homepage"
+            Title="ClixMart">
+    
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Account Details" Icon="user_icon.png" Order="Primary"
+                     x:Name="btnAccDetail"/>
+        <ToolbarItem Text="Log Out" Icon="logout.png" Order="Primary"
+                     x:Name="btnLogout"/>
+    </TabbedPage.ToolbarItems>
+</TabbedPage>

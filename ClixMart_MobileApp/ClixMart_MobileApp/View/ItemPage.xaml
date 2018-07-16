@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClixMart_MobileApp.ItemPage"
+             Title="ClixMart">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Favorite" Icon="heart_white_outline.png" Order="Primary"
+                     x:Name="btnFavorite"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="40,40,40,40">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Image x:Name="imageItem" Source="Banana.jpg" Grid.Row="1" Grid.Column="0" WidthRequest="100"/>
+            <Label x:Name="textItem" Text="Banana" FontSize="Large" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView BackgroundColor="CornflowerBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+
+                <Label Text="Brand" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Albert Heijn" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Jumbo" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Lidl" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="3"/>
+
+                <BoxView BackgroundColor="Orange" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"/>
+                
+                <Label Text="2 Euros" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Crimson" Grid.Row="1" Grid.Column="1"
+                       x:Name="ahBestPrice"/>
+                <Label Text="3 Euros" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Crimson" Grid.Row="1" Grid.Column="2"
+                       x:Name="jumboBestPrice"/>
+                <Label Text="2.5 Euros" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Crimson" Grid.Row="1" Grid.Column="3"
+                       x:Name="lidlBestPrice"/>
+            </Grid>
+
+            <ListView x:Name="Comparison">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Text="{Binding brandName}" Grid.Column="0" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding AHPrice}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                                <Label Text="{Binding JumboPrice}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                                <Label Text="{Binding LidlPrice}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
